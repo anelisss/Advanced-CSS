@@ -13,6 +13,7 @@ body {
 h1 {
     text-align: center;
     margin: 1.5em;
+    font-size: 2.5em;
 }
 nav ul {
     display: flex;
@@ -38,4 +39,10 @@ div {
     align-items: center;
     flex-direction: column;
     color: var(--black);
+}
+div h2 {
+    font-size: 2em;
+}
+div p {
+    font-size: 1.3em;
 }
