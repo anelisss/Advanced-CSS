@@ -5,9 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Light & Dark Mode Website</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="site.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Rajdhani:wght@300&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="light.css" > <!-- link catre tema light-->
+    <link rel="stylesheet" href="dark.css" id="darkcss" disabled> <!--  link catre tema dark -->
+    
+    <!-- disabled pe link css dezactiveaza linkul de stilizare. dar se pune doar pe cel din urma link. nu pe primul -->
+
     <script src="site.js" defer></script>
+    <style>
+        /* width */
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+        
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: #ffffff; 
+        }
+         
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: rgb(75, 74, 74); 
+        }
+        
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background:  rgb(38, 39, 41, 255);
+        }
+        </style>
 </head>
 <body>
     <h1>Dark Mode</h1>
@@ -16,7 +45,7 @@
             <li>Home</li>
             <li>About</li>
             <li>Contact</li>
-            <li id="icon"><i class="far fa-sun"></i>
+            <li id="icon">&#9789;</i> <!-- initial e simbolul de luna -->
         </ul>
     </nav>
     <div>

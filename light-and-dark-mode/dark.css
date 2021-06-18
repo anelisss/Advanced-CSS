@@ -1,0 +1,4 @@
+body {
+    --back-color: rgba(38,39,41,255); /*variabila css. cu click dreapta redenumim var. si se modifica peste tot unde a fost utilizata*/
+    --font-color: rgb(231, 231, 231);
+}
