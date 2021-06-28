@@ -9,8 +9,8 @@ function setTheme(theme) {
     let css = document.querySelector("#darkcss")
     css.disabled = theme == "light" ? true : false
 
-    let symbol = css.disabled ? "&#9789;" : "&#9788;" //codurile pt luna si soare
-    document.querySelector("#icon").innerHTML = symbol //schimba textul din elem icon cu id-urile respective in functie de tema: light/dark
+    // let symbol = css.disabled ? "&#9789;" : "&#9788;" //codurile pt luna si soare
+    // document.querySelector("#icon").innerHTML = symbol //schimba textul din elem icon cu id-urile respective in functie de tema: light/dark
 
     //e un loc de memorie ca sa salvam setarile de preferinta. de ex, daca site-ul ramane pe dark mode, cand intram pe site din nou, sa ramana tot dark mode.
     localStorage.setItem("theme", theme)

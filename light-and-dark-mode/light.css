@@ -1,6 +1,7 @@
 body {
     --back-color: rgb(231, 231, 231); /*variabila css. cu click dreapta redenumim var. si se modifica peste tot unde a fost utilizata*/
     --font-color: rgba(38,39,41,255);
+    --symbol: "☾";
 }
 div h2, div p {
     font-weight: lighter;
