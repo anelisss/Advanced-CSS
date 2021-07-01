@@ -1,0 +1,50 @@
+.cube {
+    --size: 10em; /*toate calculele sunt relative la dim. cubului. daca modificam, se modifica cu totul.*/
+    width: var(--size);
+    height: var(--size);
+    position: absolute;
+    top: 8em;
+    left: 35vw;
+    perspective: 200px;
+    /* perspective-origin: 0% 50%; */
+    transform-style: preserve-3d;
+    transform: rotate3d(0,1,0, 10deg);
+    animation-name: perspective;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+.side {
+    --offset: calc(var(--size) / 2); /*calcul pt translateZ al laturilor, deci e relativa la dim. cubului. deci 10/2 = 5 si atunci fiecare translateZ e 5*/
+    width: var(--size);
+    height: var(--size);
+    background-color: rgba(95, 158, 160, 0.6);
+    color:white;
+    border: 2px dashed darkgoldenrod;
+    position: absolute;
+    text-align: center;
+    line-height: var(--size); /*s-a pus cifra pe centru unei fete pe verticala */
+    transform: translateZ(var(--offset));
+}
+span {
+    font-size: 5em;
+}
+.left { transform: rotateY(-90deg) translateZ(var(--offset)); }
+.top { transform: rotateX(90deg) translateZ(var(--offset)); }
+.bottom { transform: rotateX(-90deg) translateZ(var(--offset)); }
+.right { transform: rotateY(90deg) translateZ(var(--offset)); }
+.back { transform: rotateY(-180deg) translateZ(var(--offset)); }
+.front { transform: translateZ(var(--offset)); }
+
+@keyframes perspective {
+    0% { perspective-origin: 50% 0%; }
+
+    25% { perspective-origin: 100% 0%; }
+
+    50% { perspective-origin: 100% 100%; }
+
+    75% { perspective-origin: 0% 100%; }
+
+    100% { perspective-origin: 0% 0%; }
+}
