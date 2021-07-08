@@ -24,6 +24,9 @@
     margin: 0;
     padding: 0;
 }
+body {
+    overflow: hidden; /*ca sa ascundem 'lastpage', sa nu mai apara in dreapta prin scroll.*/
+}
 #homepage, #lastpage {
     height: 100vh;
     display: flex;
@@ -43,15 +46,48 @@
     font-size: 6em;
     margin-bottom: 0.3em;
 }
-#homepage a, #lastpage a {
+#enter, #back {
     font-family: "futura-pt";
     font-size: 2em;
     cursor: pointer;
 }
+#back {
+    color: white;
+}
 #lastpage {
     background-color: rgb(205, 92, 92);
+    position: absolute;
+    top: 0;
+    left: 100vw; /* ca sa fie in dreapta paginii*/
+    width: 100vw; /*ca sa fie cat latimea ecranului */
 }
 #photos {
     margin-bottom: 2em;
+}
 
+/*animatie pt a veni pe pag 2. 'lastpage'*/
+@keyframes slide-in {
+    to {
+        left: 0;  /*animatia va face ca lastpage sa fie pe pagina principala*/
+    }
+}
+.slide-in {
+    animation-name: slide-in;
+}
+/*animatie pt a veni inapoi pe homepage*/
+@keyframes slide-out {
+    from {
+        left: 0;
+    }
+    to {
+        left: 100vw;
+    }
+}
+.slide-out {
+    animation-name: slide-out;
+}
+/*stilizarea comuna a claselor animatiilor*/
+.slide-in, .slide-out {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
